@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+/*.header span{
+    color: gray;
+}
+#admin input{
+	width: 80%;
+	height: 45px;
+	margin-left: 5%;
+	text-align: center;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+.header1 .logo{
+	text-transform: uppercase;
+}*/
+#admin button{
+	width: 50%;
+	height: 45px;
+	border: none;
+	background: black;
+	color: whitesmoke;
+	font-size: 23px;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#admin button:hover{
+	background: rgba(0,0,0,0.7);
+}
+#admin select{
+	width: 80%;
+	height: 45px;
+	margin-left: 5%;
+	text-align: center;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+ .admin-loginpage #admin select option{
+	text-align: center;
+}
+/*.header1 ul li form #logout{
+	width: 200px;
+	height: 45px;
+	background: black;
+	border: none;
+	color: whitesmoke;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.header1 ul li form #logout:hover{
+	background: rgba(0,0,0,0.7);
+}*/
+#dashboard-menu{
+	width: 90%;
+	margin-left: 5%;
+}
+#dashboard-menu ul li a{
+	list-style: none;
+    color: #1abc9c;
+    font-weight: bolder;
+}
+
+.navbarDash{
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  #myNavbarDash ul li a{
+    
+      color: #ffffff;
+  }
+  .navbarDash a{
+    color: #ffffff;}
+
+.admin form input{
+    width: 80%;
+    height: 45px;
+}
+.admin form #radio{
+    width: 15px;
+    height: 15px;
+}

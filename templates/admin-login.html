@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/admin.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Admin Login</title>
+</head>
+<body>
+        <nav class="navbarAdmin">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">York High School</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbarAdmin">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/admin">Admin</a></li>
+                      <li><a href="/user">User</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+             
+              <form class="formAdmin" action="/admin-login" method="POST">
+                <div class="form-group">
+                 <h1 style="color: black; font-family: 'Times New Roman', Times, serif">ADMIN LOGIN</h1>
+                  <label for="email">Name:</label>
+                  <input type="text"  value="saylani" class="form-control" id="email" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" value="saylani" class="form-control" id="pwd" name="pwd" required>
+                </div>
+                <button type="submit" class="btn btn-default">SignIn</button>
+              </form>
+    
+</body>
+</html>

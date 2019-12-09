@@ -1,0 +1,15 @@
+.formAdmin
+{width: 80%;
+  margin-left: 10%;
+  color:black;}
+.navbarAdmin{
+  background-color: #1abc9c; /* Green */
+  color: #ffffff;
+}
+#myNavbarAdmin ul li a{
+  
+    color: #ffffff;
+}
+.navbarAdmin a{
+  color: #ffffff;
+}

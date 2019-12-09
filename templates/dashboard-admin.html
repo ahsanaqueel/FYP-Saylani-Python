@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="../static/style.css">-->
+    <link rel="stylesheet" href="../static/dashboard-admin.css">
+    <title>Dashboard</title>
+</head>
+<body>
+        <nav class="navbarDash">
+                <div class="container">
+                  <div class="navbar-header">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">York High School</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbarDash">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav><br><br>
+              <form action="/logout" method="POST">
+                <button style="float:right;margin-right: 5%;">Logout</button>
+            </form>
+              <br><br>
+    <div class="row" id="dashboard-menu">
+            <div class="col-lg-12 user-menu">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#home"><i class="fa fa-plus" aria-hidden="true"></i> ADD MEMBER</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#menu1"><i class="fa fa-trash" aria-hidden="true"></i> REMOVE MEMBER</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#menu2"><i class="fa fa-pencil" aria-hidden="true"></i> UPDATE MEMBER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu3"><i class="fa fa-eye" aria-hidden="true"></i> ALL Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu4"><i class="fa fa-eye" aria-hidden="true"></i> ALL Teachers</a>
+                    </li>
+                  </ul>
+                
+                  <div class="tab-content">
+                    <div id="home" class="container tab-pane active"><br><br>
+                        <div class="row admin">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                        <div class="jumbotron" style="text-align: center;" id="admin">
+                                            <h1 style="text-transform: uppercase;font-family: 'Oswald', sans-serif; color: #1abc9c;">Add member here</h1>
+                                            <br><br>
+                                            <form action="/add-member" method="POST">
+                                                <br><br>
+                                                <input type="email" placeholder="Email" name="email" required>
+                                                <br><br>
+                                                <input type="text" placeholder="Name" name="name" required>
+                                                <br><br>
+                                                <input type="text" placeholder="Program" name="programm" required>
+                                                <br><br>
+                                                <input type="radio" value="teacher" name="type" id="radio" checked>Teacher
+                                               <input type="radio" value="student" name="type" id="radio">Student
+                                                <br><br><br><br>
+                                                <button type="submit" style="background-color: #1abc9c">ADD <i class="fa fa-plus" aria-hidden="true"></i></button>
+                                            </form>
+                                        </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                    </div>
+                    <div id="menu1" class="container tab-pane fade"><br>
+                        <div class="row admin">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                        <div class="jumbotron" style="text-align: center;" id="admin">
+                                            <h1 style="text-transform: uppercase;font-family: 'Oswald', sans-serif;color: #1abc9c;">remove member here</h1>
+                                            <br><br>
+                                            <form action="/remove-member" method="POST">
+                                                <br><br>
+                                                <input type="radio" value="teacher" name="type" id="radio" checked>Teacher
+                                               <input type="radio" value="student" name="type" id="radio">Student
+                                               <br><br>
+                                                <input type="email" placeholder="Email" name="email" required>
+                                                <br><br><br><br>
+                                                <button type="submit" style="background-color: #1abc9c">REMOVE <i class="fa fa-trash" aria-hidden="true"></i></button>
+                                            </form>
+                                        </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                    </div>
+                    <div id="menu2" class="container tab-pane fade"><br>
+                        <div class="row admin">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                        <div class="jumbotron" style="text-align: center;" id="admin">
+                                            <h1 style="text-transform: uppercase;font-family: 'Oswald', sans-serif;color: #1abc9c;">Update member here</h1>
+                                            <br><br>
+                                            <form action="/update-member" method="POST">
+                                                <br><br>
+                                                <input type="radio" value="teacher" name="type" id="radio" checked>Teacher
+                                               <input type="radio" value="student" name="type" id="radio">Student
+                                               <br><br>
+                                                <input type="email" placeholder="Old Email" name="old-mail" required>
+                                                <br><br>
+                                                <input type="text" placeholder="New Email" name="new-email" required>
+                                                <br><br>
+                                                <input type="text" placeholder="New Name" name="new-name" required>
+                                                <br><br>
+                                                <input type="password" placeholder="New Password" name="new-password" required>
+                                                <br><br><br>
+                                                <button type="submit" style="background-color: #1abc9c">Update <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                            </form>
+                                        </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                    </div>
+
+                    <div id="menu3" class="container tab-pane fade">
+                            <br><br>
+                                <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Email</th>
+                                            <th>Name</th>
+                                            <th>Programmm</th>
+                                            <th>Password</th>
+                                            <th>Join Date</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          {% for i in students %}
+                                            <tr>
+                                                <td>{{i['email']}}</td>
+                                                <td>{{i['name']}}</td>
+                                                <td>{{i['program']}}</td>
+                                                <td>{{i['password']}}</td>
+                                                <td>{{i['date']}}</td>
+                                            </tr>
+                                           {% endfor %}
+                                        </tbody>
+                                      </table>
+                        </div>
+
+                        <div id="menu4" class="container tab-pane fade">
+                                <br><br>
+                                <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Email</th>
+                                            <th>Name</th>
+                                            <th>Subject</th>
+                                            <th>Password</th>
+                                            <th>Join Date</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for i in teachers %}
+                                            <tr>
+                                                <td>{{i['email']}}</td>
+                                                <td>{{i['name']}}</td>
+                                                <td>{{i['program']}}</td>
+                                                <td>{{i['password']}}</td>
+                                                <td>{{i['date']}}</td>
+                                            </tr>
+                                           {% endfor %}
+                                        </tbody>
+                                </table>
+                        </div>
+
+
+                    
+                  </div>
+            </div>
+          </div>
+</div>
+</body>
+</html>

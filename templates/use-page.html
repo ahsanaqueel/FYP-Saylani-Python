@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/userlogin.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>User Login</title>
+</head>
+<body>
+        <nav class="navbarUser">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">York High School</a>
+                  </div>
+                </div>
+              </nav>
+              <form action="/logout" method="POST">
+                <button style="float:right;margin-right: 5%;">Logout</button>
+            </form>
+            <br><br>
+             
+              <div class="jumbotron" style="text-align:center;">
+                  <h2>WELCOME {{name}}</h2>
+                  <br><br>
+                  <h3>Email :   {{email}}</h3>
+                  <h3>Password : {{password}}</h3>
+                  <h3>Program : {{program}}</h3>
+              </div>
+    
+</body>
+</html>
